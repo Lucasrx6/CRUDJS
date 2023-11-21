@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>CRUD de Pessoas</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li><a href="javascript:void(0);" onclick="mostrarPagina('cadastro')">Cadastro</a></li>
+                <li><a href="javascript:void(0);" onclick="mostrarPagina('registros')">Registros</a></li>
+                <li><a href="javascript:void(0);" onclick="mostrarPagina('relatorios')">Relatórios</a></li>
+            </ul>
+        </div>
+        <!--  -->
+        <div class="content" id="cadastro">
+            <h2>Seja Bem-Vindo!</h2>
+            <p>Deseja realizar o cadastro de uma pessoa?</p>
+            <button onclick="abrirModalCadastro()">Cadastrar Pessoa</button>
+        </div>
+
+        <div class="content" id="registros">
+            <h2>Registros</h2>
+            <table id="tabelaRegistros">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Salário</th>
+                        <th>Função</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="listaRegistros"></tbody>
+            </table>
+        </div>
+        <div class="content" id="relatorios">
+            <h2>Relatórios</h2>
+            <!-- Conteúdo da página de relatórios -->
+        </div>
+    </div>
+
+    <div id="cadastroModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModalCadastro()">&times;</span>
+            <h2>Cadastro de Pessoa</h2>
+            <form id="cadastroFormModal">
+                <label for="nomeModal">Nome:</label>
+                <input type="text" id="nomeModal" required>
+    
+                <label for="idadeModal">Idade:</label>
+                <input type="number" id="idadeModal" required>
+    
+                <label for="salarioModal">Salário:</label>
+                <input type="number" id="salarioModal" required>
+    
+                <label for="funcaoModal">Função:</label>
+                <input type="text" id="funcaoModal" required>
+    
+                <button type="button" onclick="cadastrarPessoaModal()">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Editar Pessoa</h2>
+            <form id="editarForm">
+                <label for="editNome">Nome:</label>
+                <input type="text" id="editNome">
+    
+                <label for="editIdade">Idade:</label>
+                <input type="number" id="editIdade">
+    
+                <label for="editSalario">Salário:</label>
+                <input type="number" id="editSalario">
+    
+                <label for="editFuncao">Função:</label>
+                <input type="text" id="editFuncao">
+    
+                <button type="button" onclick="salvarEdicao()">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h2>Confirmação</h2>
+            <p id="confirmMessage"></p>
+            <button onclick="confirmarExclusao()">Sim</button>
+            <button onclick="fecharModal()">Cancelar</button>
+        </div>
+    </div>
+    
+    
+    <script src="js/scripts.js"></script>
+</body>
+</html>
