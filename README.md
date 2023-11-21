@@ -4,6 +4,9 @@
 Desenvolvi o CRUDJS  com o objetivo de aprimorar minhas habilidades em desenvolvimento web. 
 Ele é uma maneira de demonstrar meu trabalho e compartilhar meus projetos com outras pessoas.
 
+## Acesso ao Site
+O site pode ser acessado através do link:  https://lucasrx6.github.io/CRUDJS/
+
 ## Funcionalidades
 - `Cadastro`: Abre um modal com formulário para cadastro.
 - `Registros`: Página onde fica localizado os registros cadastrados com botões de Editar e Excluir.
@@ -47,6 +50,3 @@ Se você deseja contribuir com este projeto, siga as instruções abaixo:
 - Faça commit das suas alterações: git commit -m "feat: My new feature"
 - Envie as suas alterações para a sua branch: git push origin my-feature
 - Abra um Pull Request
-
-## Acesso ao Site
-O site pode ser acessado através do link: https://lucasrx6.github.io/AgendaJavascript/
